@@ -1,0 +1,14 @@
+{
+  "name": "canvas-to-rtmp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "nodemon -e js, html --watch server"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "ws": "^8.5.0"
+  }
+}
