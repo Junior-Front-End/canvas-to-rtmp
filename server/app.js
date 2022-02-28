@@ -8,9 +8,7 @@ const server = http.createServer(app).listen(3000, () => {
   console.log('Listening on port 3000');
 });
 
-const wss = new WebSocketServer({
-  server: server
-});
+const wss = new WebSocketServer({server});
 
 app.use((req, res, next) => {
   console.log('HTTP Request: ' + req.method + ' ' + req.originalUrl);
