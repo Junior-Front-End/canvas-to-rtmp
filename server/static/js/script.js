@@ -16,10 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         //
         var rtmp_server = e.target[0].value
         var stream_key = e.target[1].value
-        var rtmp = `${rtmp_server}/${stream_key}`;
-
-        //
-        rtmp_selector.style.display = "none"
+        var rtmp = `${rtmp_server}/${stream_key}`; 
+        console.log(rtmp_server);
+        console.log(stream_key);
 
         //
         goLive(rtmp)
@@ -64,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             
             // stop recorder
-            var rtmp_selector = document.querySelector("#rtmp_selector");
+            var rtmp_selector = document.querySelector(".rtmp_selector");
             var stop_live = document.querySelector("#stoplive");
             var stopliveDiv = document.querySelector(".stoplive");
 
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mediaRecorder.stop();
 
             // 
-            var rtmp_selector = document.querySelector("#rtmp_selector");
+            var rtmp_selector = document.querySelector(".rtmp_selector");
             var stopliveDiv = document.querySelector(".stoplive");
 
             // appearance

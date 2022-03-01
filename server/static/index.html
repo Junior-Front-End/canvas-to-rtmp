@@ -27,47 +27,89 @@
     <canvas width="1280" height="720" style="width: 100%"></canvas>
   </div>
   
+  <!-- ------------------------------------------------- -->
+  <!-- go live  -->
+  <!-- ------------------------------------------------- -->
   <div style="display: flex; justify-content: center; align-items: center; height: 300px">
     
-    
-    <!-- ------------------------------------------------- -->
-    <!-- go live  -->
-    <!-- ------------------------------------------------- -->
-    <form id="rtmp_selector" style="background-color: #fff; padding: 1em 2em;">
-      
-      <h3 >
-        Stream Server
-      </h3>
+    <!-- Start Live  -->
+    <div class="rtmp_selector" style="background-color: #aaa; padding: .5em 1em;">
+       
+      <!-- rtmp list --> 
+      <div style="margin-top: 20px;background-color: #fff;padding: .5em 1em;">
+        
+        <h3 >
+          Some rtmp Providers:
+        </h3> 
 
-      <!-- rtmp server --> 
-      <div style="margin-top: 20px;">
-        <p>Stream Server (rtmp): </p>
-        <select >
-          <option value="rtmp://fra05.contribute.live-video.net/app">Twitch</option>
-          <option value="rtmp://x.rtmp.youtube.com/live2"  >YouTube</option>
-          <option value="..." disabled>Arvan (not available)</option>
-        </select>
+        <table >
+          <tr>
+            <td>(free) Twitch</td>
+            <td style="color: #aaa;">rtmp://fra05.contribute.live-video.net/app</td> 
+          </tr>
+          <tr>
+            <td>(free) YouTube</td>
+            <td style="color: #aaa;">rtmp://x.rtmp.youtube.com/live2</td> 
+          </tr>
+          <tr>
+            <td>(free) Instagram Live</td>
+            <td style="color: #aaa;"> 
+              rtmps://live-upload.instagram.com:443/rtmp/
+              (<a style="color: #aaa;"href="https://yellowduck.tv/">
+                Yellow Duck
+              </a>)
+            </td> 
+          </tr>
+          <tr>
+            <td>(paid) Arvan Cloud</td>
+            <td style="color: #aaa;"> 
+              <a style="color: #aaa;"href="https://panel.arvancloud.com">
+                Account
+              </a> 
+          </td> 
+          </tr> 
+        </table> 
+
       </div>
 
-      <!-- stream key --> 
-      <div style="margin-top: 20px;"> 
-        <p>Stream Key: </p>
-        <input type="text" style="width: 300px">
-      </div>
+      <!-- form -->
+      <form id="rtmp_selector" style="background-color: #fff; margin-top: 20px; padding: .5em 1em;">
+        
+        <h3> Stream Server </h3>
 
-      <!-- submit -->
-      <input style="margin-top: 20px; background-color: pink;" type="submit" value="Go Live!" >
+        <!-- rtmp server --> 
+        <div >  
+          <p>Stream Server (rtmp): </p>
+          <input type="text" style="width: 300px"> 
+        </div>
 
-    </form>
+        <!-- stream key --> 
+        <div style="margin-top: 20px;"> 
+          <p>Stream Key: </p>
+          <input type="text" style="width: 300px">
+        </div>
 
-    <!-- stop live -->
+        <!-- submit -->
+        <input 
+        style="margin-top: 20px; background-color: pink;" 
+        type="submit" 
+        value="Go Live!" 
+        />
+
+      </form>
+
+    </div>
+ 
+    <!-- Stop Live -->
     <div class="stoplive" style="display: none;">
       <button id="stoplive" style="margin-top: 20px; background-color: pink;">
           Stop Live
       </button>
+      <p>
+        Stop instagram live from Yellow Duck! 
+      </p>
     </div>
-
-
+ 
   </div>
  
 </div>
